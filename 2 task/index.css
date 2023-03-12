@@ -608,14 +608,22 @@ text-transform: none;
 @media (max-width: 980px) {
     .footer-block {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     row-gap: 30px;
+    margin-left: 100px;
     
 } 
+
+@media(max-width: 500px) {
+    .footer-block {
+        margin-left: 25px;
+    }
+}
 
 @media (max-width: 320px) {
     .footer-block {
         align-items: start;
+        margin-left: 0;
     }
 }
 
@@ -747,9 +755,9 @@ text-transform: none;
     padding-bottom: 60px;
 }
 
-.footer-text {
-    text-align: none;
-}
+    .footer-text {
+        text-align: none;
+    }
 
 }
 .footer-text {
@@ -762,9 +770,9 @@ text-transform: none;
 }
 
 @media (max-width: 980px) {
-.footer-text {
-    text-align: center;
-}
+    .footer-text {
+        text-align: center;
+    }
 }
 
 @media (max-width: 320px) {
