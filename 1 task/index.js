@@ -7,8 +7,8 @@ const timerEl = document.querySelector('span');
 const createTimerAnimator = () => {
     let intervalId;
     return (seconds) => {
-        clearInterval(intervalId)
-        timerEl.innerHTML = secondsToTimer(seconds)
+        clearInterval(intervalId);
+        timerEl.innerHTML = secondsToTimer(seconds);
         intervalId = setInterval(() => {
             seconds--;
             if (seconds === -1) {
@@ -33,7 +33,7 @@ buttonEl.addEventListener('click', () => {
         alert('Введите количество секунд')
         return;
     }
-    animateTimer(seconds)
+    animateTimer(seconds);
     inputEl.value = '';
 });
 
@@ -42,7 +42,7 @@ function secondsToTimer(secondsCount) {
     const secondsFormated = seconds < 10 ? '0' + seconds : seconds;
     const minutes = ((secondsCount - seconds) / 60) % 60;
     const minutesFormated = minutes < 10 ? '0' + minutes : minutes;
-    const hour = Math.floor(secondsCount / 3600)
+    const hour = Math.floor(secondsCount / 3600);
     const hourFormated = hour < 10 ? '0' + hour : hour;
-    return `${hourFormated}:${minutesFormated}:${secondsFormated}`
+    return `${hourFormated}:${minutesFormated}:${secondsFormated}`;
 }
